@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Index</title>
+	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" href="css/carousel.css">
+</head>
+<body class="index">
+
+	<div class="wrapper">
+		<h1>Basic</h1>
+		<div class="basic color">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		</div><!-- END BASIC -->
+		<div class="cod">
+			<code>
+				$(function(){
+					$(".basic").carousel();
+				});
+			</code>
+		</div><!-- FIM COD -->
+
+		<h2>Fade - inline</h2>
+		<div class="basic carousel_fade color" data-carousel-options='{"single":true}'>
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		</div><!-- END BASIC -->
+		<div class="cod">
+			<code>
+				$(function(){
+					$(".basic").carousel();
+				});
+				data-carousel-options='{"single":true}'
+			</code>
+		</div><!-- FIM COD -->
+
+		<h1>AutoAdvance and infinite</h1>
+		<div class="time color">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		</div><!-- END TIME -->
+		<div class="cod">
+			<code>
+				$(".time").carousel({
+					autoAdvance : true,
+					autoTime : 3000,
+					infinite : true
+				});
+			</code>
+		</div><!-- FIM COD -->
+
+		<h1>Show - inline</h1>
+		<h2>Paged</h2>
+		<div class="show color" data-carousel-options='{"paged":true,"show":3}'>
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+		</div><!-- END SHOW -->
+		<div class="cod">
+			<code>
+				$(".show").carousel();
+
+				data-carousel-options='{"paged":true,"show":3}'
+			</code>
+		</div><!-- FIM COD -->
+
+		<h2>Uneven</h2>
+		<div class="show color" data-carousel-options='{"show":3}'>
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+		</div><!-- END SHOW -->
+		<div class="cod">
+			<code>
+				$(".show").carousel();
+
+				data-carousel-options='{"show":3}'
+			</code>
+		</div><!-- FIM COD -->
+
+		<h1>Responsive counts</h1>
+		<div class="responsive">
+			<div>
+				<div><img src="img/img-1.jpg" alt="Img-1" /></div>
+			</div>
+			<div>
+				<div><img src="img/img-2.jpg" alt="Img-2" /></div>
+			</div>
+			<div>
+				<div><img src="img/img-3.jpg" alt="Img-3" /></div>
+			</div>
+			<div>
+				<div><img src="img/img-4.jpg" alt="Img-4" /></div>
+			</div>
+		</div><!-- END RESPONSIVE -->
+		<div class="cod">
+			<code>
+				$(".responsive").carousel({
+					show: {
+				        "600px" : 2,
+				        "900px" : 3
+				    }
+				});
+			</code>
+		</div><!-- FIM COD -->
+
+		<h1>Custom controls</h1>
+		<div class="custom color">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		</div><!-- END CUSTOM -->
+		<div class="cod">
+			<code>
+				$(".custom").carousel({
+					customClass : "controls",
+					labels: {
+						"next" : "Next",
+						"previous" : "Prev"
+					}
+				});
+			</code>
+		</div><!-- FIM COD -->
+
+		<h2>Custom Previous/Next</h2>
+		<div class="custom2 color">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		</div><!-- END CUSTOM -->
+		<button class="custom_previous">Previous</button>
+		<button class="custom_next">Next</button>
+		<div class="cod">
+			<code>
+				$(".custom2").carousel({
+					customClass : "controls",
+					controls: {
+						"next" : ".custom_next",
+						"previous" : ".custom_previous"
+					}
+
+				});
+
+				<<span>button</span> class="custom_previous">Previous<<span>/button</span>>
+				<<span>button</span> class="custom_next">Next<<span>/button</span>>
+			</code>
+		</div><!-- FIM COD -->
+
+	</div><!-- FIM WRAPPER -->
+	
+</body>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/core.js"></script>
+<script type="text/javascript" src="js/mediaquery.js"></script>
+<script type="text/javascript" src="js/touch.js"></script>
+<script type="text/javascript" src="js/carousel.js"></script>
+
+<script>
+	$(function(){
+		$(".basic").carousel();
+	});
+
+	$(function(){
+		$(".time").carousel({
+			autoAdvance : true,
+			autoTime : 3000,
+			infinite : true
+		});
+	});
+
+	$(function(){
+		$(".show").carousel();
+	});
+
+	$(function(){
+		$(".responsive").carousel({
+			show: {
+		        "600px" : 2,
+		        "900px" : 3
+		    }
+		});
+	});
+
+	$(function(){
+		$(".custom").carousel({
+			customClass : "controls",
+			labels: {
+				"next" : "Next",
+				"previous" : "Prev"
+			}
+
+		});
+	});
+
+	$(function(){
+		$(".custom2").carousel({
+			customClass : "controls",
+			controls: {
+				"next" : ".custom_next",
+				"previous" : ".custom_previous"
+			}
+
+		});
+	});
+
+</script>
+
+</html>

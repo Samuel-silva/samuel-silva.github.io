@@ -1,0 +1,145 @@
+/*===== RESET =====*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/*===== FONT =====*/
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-smoothing: antialiased;
+	-moz-osx-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	-khtml-font-smoothing: antialiased;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+	outline: none;
+}
+b {
+	font-weight: bold;
+}
+
+/*===== WRAPPER =====*/
+.wrapper {
+	display: block;
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+}
+h1 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 1.5em;
+	line-height: 2;
+	color: #666;
+	margin: 50px 0 0 0;
+}
+h2 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 1.25em;
+	line-height: 2;
+	color: #999;
+	margin: 10px 0 0 0;
+	padding: 0 0 0 10px;
+}
+.cod {
+	width: 90%;
+	background: #f0f0f0;
+	padding: 10px;
+	margin: 10px auto;
+}
+code {
+	color: #4c5761;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/*===== COLOR =====*/
+.color .fs-carousel-item {
+	background: #34495E;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 75px;
+	height: 200px;
+	line-height: 200px;
+	margin: 0 5px 10px 5px;
+	overflow: hidden;
+	text-align: center;
+	width: 100%;
+}
+.color .fs-carousel-item:nth-child(even) {
+	background: #D35400;
+}
+
+/*===== FADE =====*/
+.carousel_fade .fs-carousel-item {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0s linear, visibility 0s linear;
+  transition: opacity 0s linear, visibility 0s linear;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+.carousel_fade .fs-carousel-item.fs-carousel-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+/*===== REPONSIVE =====*/
+.responsive .fs-carousel-item div {
+	display: inline-block;
+	width: 100%;
+}
+.responsive .fs-carousel-item img {
+	display: block;
+	margin: auto;
+	max-width: 95%;
+}
+
+/*===== CONTROLS =====*/
+.controls.fs-carousel-enabled .fs-carousel-control {
+	width: 60px;
+	border-radius: 0;
+	text-indent: 0;
+}
+.controls .fs-carousel-control:before {
+	display: none;
+}
+
+.controls.fs-carousel-enabled .fs-carousel-page {
+	width: 25px;
+	height: 25px;
+	border-radius: 0;
+	opacity: 0.5;
+	text-indent: 0;
+	color: #FFF;
+}
